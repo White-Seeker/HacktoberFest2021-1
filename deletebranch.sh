@@ -10,7 +10,6 @@ echo "Deleting branches older than 6 months in GitHub. Key branches will be excl
 echo ""
 
 # Creating sample branch to switch before deleting
-git fetch
 git branch new
 
 for branch in `git branch -r | grep -Ev 'HEAD|main|develop|recipe|tindog' | cut -c 10-`; do
