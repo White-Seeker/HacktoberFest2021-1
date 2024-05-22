@@ -17,7 +17,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: action/checkout@main
     # Runs a single command using the runners shell
-    - name: Multiline command
+    - name: Single line command
       run: sh ./deletebranch.sh
