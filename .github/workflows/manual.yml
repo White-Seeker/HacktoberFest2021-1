@@ -19,6 +19,8 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Single line command
       run: sh ./deletebranch.sh
