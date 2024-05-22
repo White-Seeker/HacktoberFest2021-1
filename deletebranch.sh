@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git remote set-url origin https://White-Seeker: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@github.com/White-Seeker/HacktoberFest2021-1.git
-
 for branch in `git branch -r | grep -Ev 'HEAD|main|develop|recipe|tindog'`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r
 cnt=0
 
