@@ -15,7 +15,7 @@ git branch new
 
 for branch in `git branch -r | grep -Ev 'HEAD|main|develop|recipe|tindog' | cut -c 10-`; do
 
-	if [[ "$(git log origin/$branch --since "6 months ago" | head -n 1 | wc -l)" -eq 0 ]]; then
+	if [[ "$(git log origin/$branch --since "30 minutes ago" | head -n 1 | wc -l)" -eq 0 ]]; then
 		echo "Deleting $branch"
         echo "Last commit to the branch: `git log -1 origin/$branch | head -n 5 | grep Date`"
 		git checkout $branch
